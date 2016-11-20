@@ -1,3 +1,6 @@
 /classes/
 /modules/
 /.exploded/
+.DS_Store
+config~
+ide-config~
