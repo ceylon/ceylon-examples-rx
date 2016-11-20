@@ -8,3 +8,4 @@ offline=false
 flatclasspath=false
 autoexportmavendependencies=false
 fullyexportmavendependencies=false
+encoding=UTF-8
