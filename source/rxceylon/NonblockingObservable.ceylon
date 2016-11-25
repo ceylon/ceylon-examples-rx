@@ -13,12 +13,12 @@ import rx {
 shared void runNonblockingObservable() {
 
     function createNonblockingObservable()
-            => observable(nonblocking<String>((subscriber) {
+            => observable(nonblocking<Integer[2]>((subscriber) {
         for (i in 0 : 50) {
             if (subscriber.unsubscribed) {
                 return;
             }
-            subscriber.onNext("value_``i``");
+            subscriber.onNext([i, i^3]);
         }
         if (!subscriber.unsubscribed) {
             subscriber.onCompleted();
@@ -27,7 +27,7 @@ shared void runNonblockingObservable() {
 
     createNonblockingObservable()
         .skip(10).take(5)
-        .map((str) => str + "_xform")
+        .map(([i, i3]) => "The cube of ``i`` is ``i3``")
         .subscribe(print);
 
 }
