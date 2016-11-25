@@ -14,7 +14,7 @@ shared void runNonblockingObservable() {
 
     function createNonblockingObservable()
             => observable(nonblocking<Integer[2]>((subscriber) {
-        for (i in 0 : 50) {
+        for (i in 0:50) {
             if (subscriber.unsubscribed) {
                 return;
             }
