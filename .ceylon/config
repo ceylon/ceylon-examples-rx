@@ -10,6 +10,6 @@ compile=check
 [defaults]
 offline=false
 flatclasspath=false
-autoexportmavendependencies=false
-fullyexportmavendependencies=false
+autoexportmavendependencies=true
+fullyexportmavendependencies=true
 encoding=UTF-8

@@ -5,41 +5,34 @@ import ceylon.uri {
     parse
 }
 
-import rx {
-    Observable {
-        observable=create
-    }
+import io.reactivex {
+    Flowable
+}
+import io.reactivex.schedulers {
+    Schedulers
+}
+
+import java.lang {
+    Thread
 }
 
 shared void runWikipediaArticles() {
 
-    function fetchWikipediaArticleAsynchronously
-        (String* wikipediaArticleNames)
-            => observable(nonblocking<String>((subscriber) {
-        try {
-            for (articleName in wikipediaArticleNames) {
-                if (subscriber.unsubscribed) {
-                    return;
-                }
-                value uri = parse("https://en.wikipedia.org/wiki/``articleName``");
-                value text = get(uri).execute().contents;
-                subscriber.onNext(text);
-            }
-            if (!subscriber.unsubscribed) {
-                subscriber.onCompleted();
-            }
-        }
-        catch (e) {
-            if (!subscriber.unsubscribed) {
-                subscriber.onError(e);
-            }
-        }
-    }));
+    function uri(String articleName)
+        => "https://en.wikipedia.org/wiki/``articleName``";
 
-    fetchWikipediaArticleAsynchronously("Tiger", "Elephant")
+    Flowable.fromArray("Tiger", "Elephant", "Hedgehog")
+        .map((articleName)
+                => get(parse(uri(articleName)))
+                    .execute()
+                    .contents)
+        .subscribeOn(Schedulers.io())
+        .observeOn(Schedulers.single())
         .map((art)
                 => "--- Article ---
-                    ``art[...200]``
+                    ``art.string[...200]``
                     ---------------")
-        .subscribe(print, (e) => e.printStackTrace());
+        .subscribe(print, printStackTrace);
+
+    Thread.sleep(5k);
 }
