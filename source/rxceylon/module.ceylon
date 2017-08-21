@@ -7,5 +7,4 @@ module rxceylon "1.0.0" {
     import maven:org.reactivestreams:"reactive-streams" "1.0.1";
     import maven:io.reactivex.rxjava2:"rxjava" "2.0.2";
     import ceylon.http.client "1.3.3";
-    import maven:co.paralleluniverse:"quasar-core" "0.7.6";
 }

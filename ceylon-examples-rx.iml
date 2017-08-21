@@ -29,20 +29,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Ceylon: ceylon.io/1.3.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Ceylon: ceylon.language/1.3.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Ceylon: ceylon.uri/1.3.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: co.paralleluniverse:quasar-core/0.7.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: com.esotericsoftware:kryo/4.0.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: com.esotericsoftware:minlog/1.3.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: com.esotericsoftware:reflectasm/1.11.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: com.google.guava:guava/19.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: com.google.protobuf:protobuf-java/2.6.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: de.javakaffee:kryo-serializers/0.38" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: io.dropwizard.metrics:metrics-core/3.1.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Ceylon: io.reactivex.rxjava2:rxjava/2.0.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: org.hdrhistogram:HdrHistogram/2.1.9" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: org.latencyutils:LatencyUtils/2.0.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: org.objenesis:objenesis/2.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: org.ow2.asm:asm/5.0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Ceylon: org.reactivestreams:reactive-streams/1.0.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Ceylon: org.slf4j:slf4j-api/1.7.7" level="project" />
   </component>
 </module>
