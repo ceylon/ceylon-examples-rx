@@ -1,21 +1,22 @@
 # RxJava with Ceylon
 
-This project contains simple examples of the use of [RxJava] 
-with Ceylon.
+This project contains simple examples of the use of [RxJava][]
+with [Ceylon][].
 
 [RxJava]: https://github.com/ReactiveX/RxJava
+[Ceylon]: https://ceylon-lang.org
 
 ## Requirements
 
-This project requires JDK 8 and [Ceylon] 1.3.1 or Ceylon IDE 
-1.3.1 for IntelliJ or Eclipse. On the command line you can use
-the provided `ceylonb` command if you don't have Ceylon already
-installed.
+This project requires JDK 8 and [Ceylon][download] 1.3.3 or 
+Ceylon IDE 1.3.3 for IntelliJ or Eclipse. On the command line 
+you can use the provided `ceylonb` command if you don't have 
+Ceylon already installed.
 
-_Note_: 1.3.1 or above is a hard requirement, since earlier
-versions of Ceylon did not support Java lambda expressions.
+_Note_: Unfortunately Ceylon 1.3.3 is not compatible with 
+RxJava 2.1 due to a bug in lambda conversions in 1.3.3.
 
-[Ceylon]: https://ceylon-lang.org/download
+[download]: https://ceylon-lang.org/download
 
 ## Running the examples
 
@@ -27,7 +28,7 @@ Ceylon IDE, or, in this directory, type:
 To run one of the other examples besides the default
 Hello World, specify the name of the function using `--run`:
 
-    ./ceylonb run --run=rxceylon::runBlockingObservable
-    ./ceylonb run --run=rxceylon::runNonblockingObservable
-    ./ceylonb run --run=rxceylon::runWikipediaArticles
+    ./ceylonb run --run=runBlocking
+    ./ceylonb run --run=runNonblocking
+    ./ceylonb run --run=runWikipediaArticles
 
